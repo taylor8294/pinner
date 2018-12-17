@@ -37,7 +37,7 @@ Pinner is very simple to run
 ## Warnings / To Do
 
 Pinner is in it's early stages.
-+ Currently pinner contains minimal error checking, ensure the pin IDs provided in `config.pins` (or `config.pinsFile`) are from valid URLs
++ Currently pinner contains minimal error checking, ensure the pin IDs provided in `config.pins` (or `config.pinsFile`) produce valid URLs.
 + Pinner doesn't try to avoid Pinterst rate limits other than the `pauseFor` option (which dictates how long to pause between pins) and the saving cookies functionality (to avoid repeated logins). It does not consider daily or hourly limits itself, please be aware of this to avoid your accout receiving any bans from Pinterest. 
 
 ---
