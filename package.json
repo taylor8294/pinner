@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alex Taylor (@taylor8294)",
-  "license": "NPOSL-3.0",
+  "license": "SEE LICENSE IN LICENSE.txt",
   "dependencies": {
     "colog": "^1.0.4",
     "puppeteer": "^1.11.0",
