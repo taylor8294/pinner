@@ -1,0 +1,17 @@
+{
+  "name": "pinner",
+  "version": "1.0.0",
+  "description": "Simple automated pinning using Puppeteer",
+  "main": "pinner.js",
+  "scripts": {
+    "start": "node pinner.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Taylor (@taylor8294)",
+  "license": "NPOSL-3.0",
+  "dependencies": {
+    "colog": "^1.0.4",
+    "puppeteer": "^1.11.0",
+    "terminal-kit": "^1.26.8"
+  }
+}
