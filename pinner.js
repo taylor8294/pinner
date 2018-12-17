@@ -5,7 +5,6 @@ const readline = require('readline');
 var term = require( 'terminal-kit' ).terminal
 
 const config = require('./config')
-const cookies = require('./cookies.json')
 const pinHost = 'https://www.pinterest.co.uk'
 
 /*
@@ -89,8 +88,13 @@ colog.info("  Config OK");
   });
 
   //Set cookies to avoid repeated logins
-  colog.info("Setting cookies...")
-  await page.setCookie.apply(page,cookies)
+  if(fs.existsSync('./cookies.json')){
+    const cookies = require('./cookies.json')
+    if(Array.isArray(cookies) && cookies.length){
+      colog.info("Setting cookies...")
+      await page.setCookie.apply(page,cookies)
+    }
+  }
 
   //Login
   colog.info("Opening login page...")
@@ -115,14 +119,14 @@ colog.info("  Config OK");
     }
 
     //Logged in! Save cookies
-    colog.info("Login successful!")
+    colog.success("Login successful!")
     colog.info("Saving cookies (async)...")
     const ckies = await page.cookies();
     fs.writeFile("./cookies.json", JSON.stringify(ckies), function(err) {
-      if(err) return console.log(err)
+      if(err) return colog.error(err)
       colog.info("  Cookies saved!")
     }); 
-  } else colog.info("Cookies worked, logged in!")
+  } else colog.success("Cookies worked, logged in!")
   
   colog.headerInfo("=== Pinning ===")
   let counter = 0;
