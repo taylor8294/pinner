@@ -16,7 +16,7 @@ npm install
 
 ### Commercial license
 
-If you want to use Pinner to develop commercial sites, themes, projects, and applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary. To acquire a Pinner Commercial License please [contact me](https://www.taylrr.co.uk/).
+If you want to use Pinner to develop commercial sites, tools, projects, or applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary. To acquire a Pinner Commercial License please [contact me](https://www.taylrr.co.uk/).
 
 ### Open source license
 
