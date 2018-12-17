@@ -1,6 +1,6 @@
 # PinnerJs
 
-_Simple automated pinning to a given Pinterest board using Puppeteer_
+_Simple automated re-pinning to a given Pinterest board using Puppeteer_
 
 ## Install
 
@@ -31,7 +31,14 @@ Pinner is very simple to run
   - As an array directly in `config.pins`
   - In a file (eg. `pins.txt` in the root folder) with one ID per line, and set `config.pinsFile` as the path to that file  (eg. `pins.txt`)
 + Enter the name of the board you wish to pin to in `config.board`
-+ Alter any other options to customise the way Pinner works 
++ Alter any other options to customise the way Pinner works such as `pauseFor`
++ To start, simply run `npm start`
+
+## Warnings / To Do
+
+Pinner is in it's early stages.
++ Currently pinner contains minimal error checking, ensure the pin IDs provided in `config.pins` (or `config.pinsFile`) are from valid URLs
++ Pinner doesn't try to avoid Pinterst rate limits other than the `pauseFor` option (which dictates how long to pause between pins) and the saving cookies functionality (to avoid repeated logins). It does not consider daily or hourly limits itself, please be aware of this to avoid your accout receiving any bans from Pinterest. 
 
 ---
 
